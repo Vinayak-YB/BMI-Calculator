@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>BMI Calculator</title>
 </head>
 <body>
+    <div class="container">
     <h1 class="heading">BMI Calculator</h1>
     <p class="description">Body Mass Index is a measure of a person's weight in kilograms divided by the square of height in meters.
-    Please enter height and weight to find out the BMI.
+    Please enter height and weight to find out the BMI. <br>
+    <div class="yello" >Range :</div>
+    <div class="u">Below 18.5 - Underweight </div> 
+    <div class="n">18.5 to 24.9 - Normal weight </div>
+    <div class="o">Above 25 - Overweight</div> 
     </p>
     <label for="height">Height: (meter)</label>
-    <input type="number" id="height" placeholder="Enter height "></input>
+    <input class="inp" type="number" id="height" placeholder="Enter height "></input>
     <label for="weight">Weight: (kilogram)</label>
-    <input type="number" id="weight" placeholder="Enter weight "></input>
-    <button class="btn" id="calc-btn">Calculate</button>
+    <input  class="inp" type="number" id="weight" placeholder="Enter weight "></input>
+    <button class="btn" id="calc-btn">Submit</button>
     <p class="out" id="result"></p>
+    </div>
 
     <script src="script.js"></script>
 
