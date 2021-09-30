@@ -1,23 +1,17 @@
-var Height = document.getElementsByClassName("inp1");
-const Weight = document.querySelector("#weight");
-const calculateBtn = document.getElementById("calc-btn");
-const output = document.getElementById("result");
+var Height = document.getElementById("height");
+var Weight = document.getElementById("weight");
+var calcBtn = document.getElementById("calc-btn");
+var output = document.getElementById("result");
 
-function checkBMI(){
+calcBtn.addEventListener("click", submitHandler);
+function submitHandler()
+{
+    var a = Number(Height.value)
+    var b = Number(Weight.value)
     console.log(Height.value);
     console.log(Weight.value);
-    var Bmi = getBMI(Height.value,Weight.value)
-    output.innerText="Your BMI is "+ Bmi;
-}
-function getBMI(h,w){
-    var bmi = (w / (h*h));
-    return bmi;
-}
-calculateBtn.addEventListener("click",printval());
-
-function printval(){
-    console.log(Height.value);
-    console.log(Weight.value);
-    output.innerText= Height.value;
-    output.innerText= Weight.value;
-}
+    var answer = b / (a*a)
+    answer = answer.toFixed(2);
+    console.log(answer);
+    output.innerText = "Your BMI is " + answer;
+};
